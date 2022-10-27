@@ -14,6 +14,8 @@ expect {
     timeout { exit 1 }
 }
 
+sleep 5
+
 #
 # Test 'create wallet'
 #
