@@ -15,6 +15,9 @@ expect {
 }
 
 sleep 5
+exit 0
+
+spawn dotnet out/neo-cli.dll
 
 #
 # Test 'create wallet'
