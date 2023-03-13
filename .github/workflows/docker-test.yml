@@ -1,6 +1,6 @@
 name: Docker Build Test
 
-on: pull_request
+on: push
 
 jobs:
   docker-build-test:
