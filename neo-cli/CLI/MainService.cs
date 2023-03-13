@@ -262,11 +262,11 @@ namespace Neo.CLI
                 // Check bad opcodes
 
                 Instruction inst = script.GetInstruction(i);
-                if (inst is null || !Enum.IsDefined(typeof(OpCode), inst.OpCode))
-                {
-                    throw new FormatException($"OpCode not found at {i}-{((byte)inst.OpCode).ToString("x2")}");
-                }
-                i += inst.Size;
+                // if (inst is null || !Enum.IsDefined(typeof(OpCode), inst.OpCode))
+                // {
+                //     throw new FormatException($"OpCode not found at {i}-{((byte)inst.OpCode).ToString("x2")}");
+                // }
+                // i += inst.Size;
             }
 
             // Build script
