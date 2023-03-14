@@ -257,7 +257,6 @@ namespace Neo.CLI
             // Basic script checks
 
             // Script script = new Script(nef.Script);
-            Script script2 = new Script(nef.Script, true);
             nef.Script.IsScriptValid(manifest.Abi);
 
             // Build script
