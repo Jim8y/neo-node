@@ -311,7 +311,9 @@ namespace Neo.CLI
 
             // Basic script checks
 
-            Script script = new Script(nef.Script, true);
+            Script script = new Script(nef.Script);
+            Script script2 = new Script(nef.Script, true);
+
             // for (var i = 0; i < script.Length;)
             // {
             //     // Check bad opcodes
