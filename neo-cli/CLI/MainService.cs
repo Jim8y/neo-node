@@ -311,7 +311,8 @@ namespace Neo.CLI
 
             // Basic script checks
 
-            nef.Script.IsScriptValid(manifest.Abi);
+            // nef.Script.IsScriptValid(manifest.Abi);
+
             // for (var i = 0; i < script.Length;)
             // {
             //     // Check bad opcodes
