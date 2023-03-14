@@ -11,6 +11,9 @@
 // using System;
 // using Neo.SmartContract.Manifest;
 
+using System;
+using Neo.SmartContract.Manifest;
+
 namespace Neo.CLI
 {
 
@@ -27,16 +30,16 @@ namespace Neo.CLI
 
         public static string ToBase64String(this byte[] input) => System.Convert.ToBase64String(input);
 
-        // public static void IsScriptValid(this ReadOnlyMemory<byte> script, ContractAbi abi)
-        // {
-        // //     // try
-        // //     // {
-        // //     //     SmartContract.Helper.Check(script.ToArray(), abi);
-        // //     // }
-        // //     // catch (Exception e)
-        // //     // {
-        // //     //     throw new FormatException($"Bad Script or Manifest Format: {e.Message}");
-        // //     // }
-        // }
+        public static void IsScriptValid(this ReadOnlyMemory<byte> script, ContractAbi abi)
+        {
+        try
+        {
+            SmartContract.Helper.Check(script.ToArray(), abi);
+        }
+        catch (Exception e)
+        {
+            throw new FormatException($"Bad Script or Manifest Format: {e.Message}");
+        }
+        }
     }
 }
