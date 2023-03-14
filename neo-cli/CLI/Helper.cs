@@ -32,14 +32,14 @@ namespace Neo.CLI
 
         public static void IsScriptValid(this ReadOnlyMemory<byte> script, ContractAbi abi)
         {
-        try
-        {
-            SmartContract.Helper.Check(script.ToArray(), abi);
-        }
-        catch (Exception e)
-        {
-            throw new FormatException($"Bad Script or Manifest Format: {e.Message}");
-        }
+            try
+            {
+                SmartContract.Helper.Check(script.ToArray(), abi);
+            }
+            catch (Exception e)
+            {
+                throw new FormatException($"Bad Script or Manifest Format: {e.Message}");
+            }
         }
     }
 }
